@@ -34,6 +34,16 @@ header {
     letter-spacing: 5px;
 }
 
+@media screen and (max-width: 620px) {
+    #logo {
+        display: none;
+        position: relative;
+        margin-left: 35%;
+
+    }
+    
+}
+
 /* Navigation */
 
 nav {
@@ -69,13 +79,16 @@ a:visited {
 
 .intro-container {
     background-color:cornflowerblue;
-    overflow: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
 }
 
 .image-container {
     max-width: 600px;
     margin: 0;
-    float: left;
+   
     padding: 3%;
     box-sizing: border-box;
 }
@@ -90,7 +103,7 @@ a:visited {
 }
 
 .intro-text {
-    float: left;
+   
     max-width: 600px;
     margin: 0;
     padding: 3%;
@@ -115,13 +128,15 @@ footer p {
 
 .gallery-container {
     background-color: cornflowerblue;
-    overflow: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .gallery-image {
-    width: 25%;
+    width: 300px;
     height: 200px;
-    float: left;
     padding: 5px;
     box-sizing: border-box;
     outline: 5px solid black;
@@ -130,12 +145,58 @@ footer p {
 }
 
 
+/* FULL SCREEN IMAGE MODAL */
+
+.modal {
+    z-index: 1;
+    display: none;
+    padding-top: 10px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    position: absolute;
+    max-height: 100%;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+}
+
+.close {
+    text-decoration: none;
+    float: right;
+    font-size: 60px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    padding-right: 3%;
+}
+
+#fullsize-img {
+    max-height: 90vh;
+    width: auto;
+    
+}
+
+
 
 /* ABOUT */
 
 .about-container {
     background-color: cornflowerblue;
-    overflow: auto;
+    
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
     
     
 }
@@ -143,7 +204,6 @@ footer p {
 .about-img-container {
     max-width: 600px;
     margin: 0;
-    float: right;
     padding: 3%;
     box-sizing: border-box;
 }
@@ -155,7 +215,6 @@ footer p {
     border-radius: 50%;
     border: 5px solid black;
     box-sizing: border-box;
-    float: right;
     overflow: auto;
     
     
